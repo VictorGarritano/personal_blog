@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NLP Newsletter: NLP Paper Summaries, Learning to Simulate, Transformers Notebooks, Med7, Measuring Compositional Generalization, Neural Tangents,…"
+title: "NLP Newsletter [PT-BR] #7: NLP Paper Summaries, Learning to Simulate, Transformers Notebooks, Med7, Measuring Compositional Generalization, Neural Tangents,…"
 author: VictorGarritano
 excerpt: "Nessa edição, são abordados assuntos como melhorias na avaliação da compositional generalization, bibliotecas de visão computacional baseadas no PyTorch e um simulador físico estado-da-arte."
 

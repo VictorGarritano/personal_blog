@@ -4,10 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Hi, I'm Victor Garritano!
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Currently I'm a M.Sc. Candidate in AI at PESC - COPPE - UFRJ. I also work as Data Science Intern at [TWIST Systems](https://www.twist.systems/en/).
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+In this blog you will find my contributions for NLP Newsletter, and much more!

@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML | fastpages</title>
+<title>NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML | Garritano’s Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML" />
 <meta name="author" content="VictorGarritano" />
@@ -12,14 +12,14 @@
 <meta property="og:description" content="Essa edição cobre tópicos como extensões ao modelo Transformer, desaceleração no processo de publicação em Aprendizado de Máquina, divulgação de livros e projetos sobre ML e NLP e muito mais" />
 <link rel="canonical" href="https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html" />
 <meta property="og:url" content="https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html" />
-<meta property="og:site_name" content="fastpages" />
+<meta property="og:site_name" content="Garritano’s Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-02T00:00:00-06:00" />
 <script type="application/ld+json">
 {"datePublished":"2020-03-02T00:00:00-06:00","dateModified":"2020-03-02T00:00:00-06:00","author":{"@type":"Person","name":"VictorGarritano"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html"},"description":"Essa edição cobre tópicos como extensões ao modelo Transformer, desaceleração no processo de publicação em Aprendizado de Máquina, divulgação de livros e projetos sobre ML e NLP e muito mais","@type":"BlogPosting","url":"https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html","headline":"NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/personal_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/personal_blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML | fastpages</title>
+<link rel="stylesheet" href="/personal_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="Garritano's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/personal_blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML | Garritano’s Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="NLP Newsletter [PT-BR] #6: BERTology Primer, fastpages, T5, Data Science Education, PyTorch Notebooks, Slow Science in ML" />
 <meta name="author" content="VictorGarritano" />
@@ -28,7 +28,7 @@
 <meta property="og:description" content="Essa edição cobre tópicos como extensões ao modelo Transformer, desaceleração no processo de publicação em Aprendizado de Máquina, divulgação de livros e projetos sobre ML e NLP e muito mais" />
 <link rel="canonical" href="https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html" />
 <meta property="og:url" content="https://victorgarritano.github.io/personal_blog/2020/03/02/NLP_Newsletter-PT-BR-_BERTology_Primer_fastpages_T5.html" />
-<meta property="og:site_name" content="fastpages" />
+<meta property="og:site_name" content="Garritano’s Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-03-02T00:00:00-06:00" />
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="fastpages" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="Garritano's Blog" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
@@ -85,7 +85,7 @@ window.onload = wrap_img;
 </script>
 </head><body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/personal_blog/">fastpages</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/personal_blog/">Garritano&#39;s Blog</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -454,11 +454,11 @@ Sebastian Ruder publicou uma nova edição da newsletter <em>NLP News</em>, que 
         </p>
       </div>
       <div class="footer-col">
-        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+        <p></p>
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/VictorGarritano" title="VictorGarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/victorgarritano" title="victorgarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/vic_garritano" title="vic_garritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li><li><a rel="me" href="https://t.me/victorgarritano" title="victorgarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#telegram"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/VictorGarritano" title="VictorGarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/victor-garritano" title="victor-garritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/vic_garritano" title="vic_garritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li><li><a rel="me" href="https://t.me/victorgarritano" title="victorgarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#telegram"></use></svg></a></li></ul>
 </div>
 
   </div>

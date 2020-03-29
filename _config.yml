@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Garritano's Blog
+# description: An easy to use blogging platform with support for Jupyter Notebooks.
 github_username: VictorGarritano
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "personal_blog"
@@ -41,7 +41,7 @@ minima:
   social_links:
     twitter: vic_garritano
     github: VictorGarritano
-    linkedin: victorgarritano
+    linkedin: victor-garritano
     telegram: victorgarritano
 
 # Set this to true to get LaTeX math equation support

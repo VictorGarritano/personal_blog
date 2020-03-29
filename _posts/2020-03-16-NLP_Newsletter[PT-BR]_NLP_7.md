@@ -6,7 +6,7 @@ excerpt: "Nessa edição, são abordados assuntos como melhorias na avaliação 
 
 modified:
 comments: true
-tags: [nlp_newsletter]
+categories: [nlp_newsletter]
 image:
   thumb: nlp_newsletter_7.png
 ---
@@ -53,7 +53,7 @@ No contexto de Aprendizado de Máquina, *compositional generalization* se refere
 ***Fine-Tuning Pretrained Language Models: Weight Initializations, Data Orders, and Early Stopping***
 
 \\
-Pesquisadores testaram uma série de [procedimentos de refinamento](https://arxiv.org/abs/2002.06305) (*fine-tuning*) com o objetivo de compreender melhor o efeito das diferentes estratégias de inicialização de pesos e políticas de *early stopping* no desempenho de modelos de linguagem. Através de exaustivos experimentos de refinamento do BERT, foi constatado que *seeds* aleatórias distintas produzem resultados bastante discrepantes. Em particular, o estudo reporta que certas inicializações de pesos de fato conferem ao modelo um bom desempenho em diversas tarefas. Todas as bases e testes realizados foram disponibilizadas, para uso de outros pesquisadores interessados em entender as dinâmicas que ocorrem durante o *fine-tuning* de maneira mais aprofundada. 
+Pesquisadores testaram uma série de [procedimentos de refinamento](https://arxiv.org/abs/2002.06305) (*fine-tuning*) com o objetivo de compreender melhor o efeito das diferentes estratégias de inicialização de pesos e políticas de *early stopping* no desempenho de modelos de linguagem. Através de exaustivos experimentos de refinamento do BERT, foi constatado que *seeds* aleatórias distintas produzem resultados bastante discrepantes. Em particular, o estudo reporta que certas inicializações de pesos de fato conferem ao modelo um bom desempenho em diversas tarefas. Todas as bases e testes realizados foram disponibilizadas, para uso de outros pesquisadores interessados em entender as dinâmicas que ocorrem durante o *fine-tuning* de maneira mais aprofundada.
 
 <!-- Researchers ran a comprehensive [set of fine-tuning trials](https://arxiv.org/abs/2002.06305) to better understand the effect of weight initialization and early stopping in the performance of language models. Through various experiments that involved fine-tuning BERT hundreds of times, it was found that distinct random seeds produce very different results. In particular, the study reports that some weight initialization does perform well across a set of tasks. All the experimental data and trials were publicly released for other researchers that are interested in further understanding different dynamics during fine-tuning. -->
 
@@ -80,7 +80,7 @@ Numa nova iniciativa da dar.ai, a [NLP Research Highlights](https://medium.com/d
 ***Learning to Simulate Complex Physics with Graph Networks***
 
 \\
-Nos últimos meses, as *Graph Neural Networks (GNNs)* (redes neurais que operam sobre redes) foram um assunto recorrente nas edições da *Newsletter*, devido a sua efetividade em tarefas não só da área de NLP como também em genômica e materiais. Um [artigo](https://arxiv.org/abs/2002.09405) publicado recentemente, propõe um *framework* geral baseado em *GNNs* que é capaz de realizar simulações físicas em diferentes cenários, como fluidos e materiais maleáveis. Os autores argumentam que eles obtiveram um desempenho estado-da-arte nesses diferentes contextos e que a abordagem proposta é possivelmente o melhor simulador treinado da atualmente. Os experimentos realizados incluem a simulação de materiais como fluidos viscosos sobre a água e outras interações com objetos rígidos. Também foi testado um modelo pré-treinado em tarefas *out-of-distribution* e os resultados obtidos foram bastante promissores, evidenciando o potencial de generalização para outros cenários. 
+Nos últimos meses, as *Graph Neural Networks (GNNs)* (redes neurais que operam sobre redes) foram um assunto recorrente nas edições da *Newsletter*, devido a sua efetividade em tarefas não só da área de NLP como também em genômica e materiais. Um [artigo](https://arxiv.org/abs/2002.09405) publicado recentemente, propõe um *framework* geral baseado em *GNNs* que é capaz de realizar simulações físicas em diferentes cenários, como fluidos e materiais maleáveis. Os autores argumentam que eles obtiveram um desempenho estado-da-arte nesses diferentes contextos e que a abordagem proposta é possivelmente o melhor simulador treinado da atualmente. Os experimentos realizados incluem a simulação de materiais como fluidos viscosos sobre a água e outras interações com objetos rígidos. Também foi testado um modelo pré-treinado em tarefas *out-of-distribution* e os resultados obtidos foram bastante promissores, evidenciando o potencial de generalização para outros cenários.
 
 <!-- In the past few months, we have been featuring a lot about Graph Neural Networks (GNNs) due to their effectiveness not only in NLP but in other areas such as genomics and materials. In a recent [paper](https://arxiv.org/abs/2002.09405), researchers propose a general framework based on graph networks that is able to learn simulations in different domains such as fluids and deformable materials. The authors claim that they achieve state-of-the-art performance across different domains and that their general-purpose approach is potentially the best-learned physics simulator to date. Experiments include the simulation of materials such as goop over water and other interactions with rigid obstacles. They also tested a pre-trained model on out-of-distribution tasks and found promising results that show the generalization of the framework to larger domains. -->
 
@@ -342,7 +342,7 @@ Rachael Tatman está trabalhando numa nova série denominada [NLP for Developers
 <!-- Rachael Tatman is working on a new series called [NLP for Developers](https://www.youtube.com/watch?v=-G36q8_cYsc&feature=emb_logo) where the idea is to talk more in-depth about different NLP methods, when to use them and explaining common issues that you may run into. -->
 
 \\
-A DeepMind liberou o [AlphaGo — The Movie](https://youtu.be/WXuK6gekU1Y) no YouTube para celebrar o 4º aniversário da vitória do modelo sobre o Lee Sedol no jogo de Go. 
+A DeepMind liberou o [AlphaGo — The Movie](https://youtu.be/WXuK6gekU1Y) no YouTube para celebrar o 4º aniversário da vitória do modelo sobre o Lee Sedol no jogo de Go.
 
 <!-- DeepMind releases [AlphaGo — The Movie](https://youtu.be/WXuK6gekU1Y) on YouTube to celebrate the 4th anniversary of AlphaGo beating Lee Sedol at the game of Go. -->
 
@@ -353,7 +353,7 @@ A OpenMined está com [vagas abertas](https://blog.openmined.org/introducing-ope
 
 ----------
 
-Se você conhecer bases de dados, projetos, postagens, tutoriais ou artigos que você gostaria de ver na próxima edição da *Newsletter*, sinta-se a vontade para nos contactar através do e-mail ellfae@gmail.com ou de uma [mensagem direta no twitter](https://twitter.com/omarsar0). 
+Se você conhecer bases de dados, projetos, postagens, tutoriais ou artigos que você gostaria de ver na próxima edição da *Newsletter*, sinta-se a vontade para nos contactar através do e-mail ellfae@gmail.com ou de uma [mensagem direta no twitter](https://twitter.com/omarsar0).
 
 <!-- If you have any datasets, projects, blog posts, tutorials, or papers that you wish to share in the next iteration of the NLP Newsletter, please free to reach out to me at ellfae@gmail.com or ****[**DM on Twitter**](https://twitter.com/omarsar0). -->
 

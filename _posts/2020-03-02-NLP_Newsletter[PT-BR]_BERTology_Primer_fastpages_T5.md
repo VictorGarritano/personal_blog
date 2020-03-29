@@ -6,7 +6,7 @@ modified:
 comments: true
 excerpt: "Essa edição cobre tópicos como extensões ao modelo Transformer, desaceleração no processo de publicação em Aprendizado de Máquina, divulgação de livros e projetos sobre ML e NLP e muito mais"
 
-tags: [nlp_newsletter]
+categories: [nlp_newsletter]
 image:
   thumb: nlp_newsletter_6.png
 ---

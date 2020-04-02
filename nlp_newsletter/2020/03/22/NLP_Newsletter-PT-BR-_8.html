@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,… | Garritano’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…" />
+<meta name="author" content="VictorGarritano" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados." />
+<meta property="og:description" content="Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados." />
+<link rel="canonical" href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" />
+<meta property="og:url" content="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" />
+<meta property="og:site_name" content="Garritano’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-22T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"VictorGarritano"},"description":"Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html"},"url":"https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html","headline":"NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…","dateModified":"2020-03-22T00:00:00-05:00","datePublished":"2020-03-22T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/personal_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="Garritano's Blog" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-162360650-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/personal_blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,… | Garritano’s Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…" />
+<meta name="author" content="VictorGarritano" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados." />
+<meta property="og:description" content="Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados." />
+<link rel="canonical" href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" />
+<meta property="og:url" content="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" />
+<meta property="og:site_name" content="Garritano’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-22T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"VictorGarritano"},"description":"Essa edição cobre tópicos como produção de novas perspectivas em cenários complexos, tutoriais para geração de textos, e coletâneas de artigos sobre embeddings contextualizados e modelos de linguagem pré-treinados.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html"},"url":"https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html","headline":"NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…","dateModified":"2020-03-22T00:00:00-05:00","datePublished":"2020-03-22T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://victorgarritano.github.io/personal_blog/feed.xml" title="Garritano's Blog" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-162360650-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/personal_blog/">Garritano&#39;s Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/personal_blog/about/">About Me</a><a class="page-link" href="/personal_blog/search/">Search</a><a class="page-link" href="/personal_blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-22T00:00:00-05:00" itemprop="datePublished">
+        Mar 22, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">VictorGarritano</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/personal_blog/categories/#nlp_newsletter">nlp_newsletter</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="https://cdn-images-1.medium.com/max/1200/1*SptuncVzQw49OZFlDVaQdw.png" alt="" /></p>
+
+<h1 id="atualizações-da-dairai">Atualizações da dair.ai</h1>
+
+<ul>
+  <li>Nós melhoramos a categorização de todos os <em>TL;DR</em>’s e resumos já incluídos no <a href="https://github.com/dair-ai/nlp_paper_summaries">repositório</a> do <em>NLP Paper Summaries</em>.</li>
+  <li>Todos os <em>issues</em> e traduções da <em>Newsletter</em> passaram a ser mantidos <a href="https://github.com/dair-ai/nlp_newsletter">aqui</a>.</li>
+  <li>Também foram introduzidos nessas semanas os <a href="https://github.com/dair-ai/notebooks">Notebooks</a>, focando no compartilhamento de <em>notebooks</em> de Ciência de Dados com a comunidade. Se você tem algum que gostaria de compartilhar, entre em contato conosco!</li>
+  <li>Nós disponibilizamos um <a href="https://colab.research.google.com/drive/1YuL0iqxaz09qR0_2Fgyi2wQHgil_Seqg">tutorial</a> que demonstra como realizar uma classificação de emoções utilizando a <em>TextVectorization</em> — uma funcionalidade experimental do TensorFlow 2.1 que auxilia no tratamento de texto em redes neurais.
+<!-- - We have added better categorization for all TL;DR and summaries included in the NLP paper summaries [repo](https://github.com/dair-ai/nlp_paper_summaries). -->
+<!-- - All issues and translations of the NLP Newsletter are being maintained [here](https://github.com/dair-ai/nlp_newsletter). -->
+<!-- - This week we also introduced [Notebooks,](https://github.com/dair-ai/notebooks) a hub for easily sharing data science notebooks with the community at large. If you have any notebooks that you would love to share with the community get in touch. -->
+<!-- - We shared a [tutorial](https://colab.research.google.com/drive/1YuL0iqxaz09qR0_2Fgyi2wQHgil_Seqg) that provides steps on how to perform multiclass emotion classification using TextVectorization — an experimental feature in TensorFlow 2.1.0 that helps to manage text in a neural network. --></li>
+</ul>
+
+<h1 id="pesquisas-e-publicações-">Pesquisas e Publicações 📙</h1>
+
+<p><strong><em>Surveys on Contextual Embeddings</em></strong></p>
+
+<p><br />
+Esse <a href="https://arxiv.org/abs/2003.07278v1">artigo</a> fornece um compilado de metodologias para o aprendizado de <em>embeddings</em> contextualizados. Também estão inclusos uma revisão dos casos de uso da técnica para <em>transfer learning</em>, métodos de compressão de modelos e análises.</p>
+
+<p><br />
+Outro <a href="https://arankomatsuzaki.files.wordpress.com/2020/03/written_report.pdf">trabalho</a> traz uma coleção de métodos utilizados para a melhoria de modelos de linguagem baseados no <em>Transformer</em>.</p>
+
+<p><br />
+E aqui está outra <a href="https://arxiv.org/pdf/2003.08271.pdf">coletânea</a> de modelos de linguagem pré-treinados, que propõe uma taxonomia para modelos dessa natureza em NLP.</p>
+
+<!-- This [paper](https://arxiv.org/abs/2003.07278v1) provides a light survey of approaches for learning contextual embeddings. It also includes a review of its applications for transfer learning, model compression methods, and model analyses. Another report involves a [summary](https://arankomatsuzaki.files.wordpress.com/2020/03/written_report.pdf) of methods used to improve Transformer based language models. Here is also another [comprehensive survey](https://arxiv.org/pdf/2003.08271.pdf) on pretrained language models which provides a taxonomy of NLP pretrained models. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*1jLfdem3xZ0I3EVSyOy48g.png" alt="" /></p>
+
+<p><a href="https://arxiv.org/pdf/2003.08271.pdf"><em>Qiu et al., 2020</em></a></p>
+
+<p><br />
+<strong><em>Visualizing Neural Networks with the Grand Tour</em></strong></p>
+
+<p><br />
+O <em>Grand Tour</em> é um método linear (em contraste com outras técnicas não-lineares, como o t-SNE) que realiza a projeção de bases de dados de dimensão alta para duas dimensões. Neste novo <a href="https://distill.pub/2020/grand-tour/">artigo</a> do Distill, Li et al. (2020) propõem a utilização das habilidades do <em>Grand Tour</em> para visualizar o comportamento de uma rede neural durante o processo de treinamento. Comportamentos de interesse nas análises incluem as mudanças de pesos e como essas afetam o processo de treinamento, comunicação entre camadas do modelo e o efeito de exemplos adversariais ao serem apresentados para a rede neural.</p>
+
+<!-- The Grand Tour is a linear approach (differs from the non-linear methods such as t-SNE) that projects a high-dimensional dataset to two dimensions. In a new Distill [article](https://distill.pub/2020/grand-tour/), Li et al. (2020) propose to use the Grand Tour capabilities to visualize the behavior of a neural network as it trains. Behaviors of interest in the analysis include weight changes and how it affects the training process, layer-to-layer communication in the neural network, the effect of adversarial examples when they are presented to the neural network. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*XYCRZOzslb-ZRYlmtHV0Ng.png" alt="" /></p>
+
+<p><em>Fonte:</em> <a href="https://distill.pub/2020/grand-tour/"><em>Distill</em></a></p>
+
+<p><br />
+<strong><em>Meta-Learning Initializations for Low-Resource Drug Discovery</em></strong></p>
+
+<p><br />
+Diversos trabalhos demonstram como o <em>meta-learning</em> pode viabilizar a adoção de técnicas de <em>Deep Learning</em> para melhorar <em>benchmarks</em> de <em>few-shot learning</em>. Essa ideia é particularmente útil quando nos deparamos com situações onde a quantidade de dados disponíveis é limitada, como no caso do desenvolvimento de novos medicamentos. Um <a href="https://arxiv.org/abs/2003.05996">artigo recente</a> aplicou uma técnica de <em>meta-learning</em> denominada <em>Model-Agnostic-Meta-Learning (MAML)</em>, e suas variantes, para predizer propriedades químicas em cenários de escassez de dados. Os resultados obtidos demonstraram que a abordagem utilizada tem um desempenho similar a outros métodos multi-tarefa pré-treinados.</p>
+
+<!-- It has been widely reported that meta-learning can enable the application of deep learning to improve on few-shot learning benchmarks. This is particularly useful when you have situations where there is limited data as is typically the case in drug discovery. A recent [work](https://arxiv.org/abs/2003.05996) applied a meta-learning approach called Model-Agnostic-Meta-Learning (MAML) and other variants to predict chemical properties and activities in low-resource settings. Results show that the meta-learning approaches perform comparably to multi-task pre-training baselines. -->
+
+<p><br />
+<strong><em>NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</em></strong></p>
+
+<p><br />
+Um trabalho bastante interessante envolvendo pesquisadores da UC Berkeley, Google Research e da UC San Diego desenvolveu um método (<a href="http://www.matthewtancik.com/nerf">NeRF</a>) para a criação de novas perspectivas em cenários complexos. Tomando um conjunto de imagens RGB como base de dados, o modelo utiliza coordenadas 5D (localização espacial e direção) para o treinamento de uma rede neural profunda totalmente conectada, otimizando uma <em>continuous volumetric scene function</em>, e retornando a densidade de volume e radiância para aquela localização. Os diversos valores de saída são combinados ao longo de um <em>camera ray</em> e renderizados como <em>pixels</em>. Essas saídas renderizadas são utilizadas para otimizar representações de cenas através da minimização do erro de renderização para todos os <em>camera rays</em> das imagens RGB. Comparada com outras abordagens para a tarefa, a NeRF é quantitativa e qualitativamente melhor, além de conseguir resolver algumas inconsistências das outras abordagens, como a ausência de pequenos detalhes e <em>flickering</em> indesejado.</p>
+
+<!-- An exciting work involving researchers from UC Berkeley, Google Research, and UC San Diego present a method ([NeRF](http://www.matthewtancik.com/nerf)) for synthesizing novel views of complex scenes. Using a collection of RGB image inputs, the model takes 5D coordinates (spatial location and direction), train a fully-connected DNN to optimize *a continuous volumetric scene function*, and outputs the volume density and view-dependent emitted RGB radiance for that location. The output values are composed together along a camera ray and rendered as pixels. These rendered differentiable outputs are used to optimize the scene representations *by minimizing the error of renderings all camera rays* from RGB images. Compared to other top-performing approaches for view synthesis, NeRF is qualitatively and quantitatively better and addresses inconsistencies in rendering such as lack of fine details and unwanted flickering artifacts. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*E6RQL5jdtHXR98BJJREDYg.png" alt="" /></p>
+
+<p><br />
+<strong><em>Introducing Dreamer: Scalable Reinforcement Learning Using World Models</em></strong></p>
+
+<p><br />
+O <a href="https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html">Dreamer</a> é um agente de Aprendizado por Reforço que busca resolver algumas limitações (como imediatismo e ineficiência computacional) observados em agentes baseados em modelos para resolver tarefas com alto nível de dificuldade. Esse agente, proposto por pesquisadores da DeepMind e da Google AI, é treinado para modelar o mundo no qual está inserido e desenvolver a habilidade de aprender comportamentos focados no longo prazo utilizando o <em>backpropagation</em>. Resultados estado-da-arte foram obtidos em 20 tarefas de controle, baseadas nas imagens de entrada fornecidas. Além disso, o modelo é eficiente e pode operar de forma paralela, tornando-o mais interessante do ponto de vista computacional. As três tarefas envolvidas no treinamento do agente, com objetivos distintos, são sintetizadas na Figura abaixo.</p>
+
+<!-- [Dreamer](https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html) is a reinforcement learning (RL) agent proposed to address some limitations (e.g. shortsightedness and computational inefficiency) present in model-free and model-based agents for solving difficult tasks. This RL agent, proposed by DeepMind and Google AI researchers, is trained to model the world that also provides the ability to learn long-sighted behaviors via backpropagation using the model predictions. SoTA results are achieved on 20 continuous control tasks based on the provided image inputs. In addition, the model is data-efficient and makes predictions in parallel, making it more computationally efficient. The three tasks involved in training the agent that achieve the different goals are summarized in the figure below: -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*DOlPDgvNu1kpTeogcLve-A.png" alt="" /></p>
+
+<p><em>Fonte:</em> <a href="https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html"><em>Google AI Blog</em></a></p>
+
+<h1 id="criatividade-ética-e-sociedade-">Criatividade, Ética e Sociedade 🌎</h1>
+
+<p><strong><em>COVID-19 Open Research Dataset (CORD-19)</em></strong></p>
+
+<p><br />
+Num esforço para encorajar a utilização da IA na luta contra a COVID-19, o <em>Allen Institute of AI</em> publicou o <a href="https://pages.semanticscholar.org/coronavirus-research">COVID-19 Open Research Dataset (CORD-19)</a>, um recurso publicamente disponível que busca promover colaboração global. A base de dados contém milhares de artigos que permitem a obtenção de <em>insights</em>, através do emprego de técnicas de NLP, que podem ajudar na luta contra o <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">coronavírus</a>.</p>
+
+<!-- In an effort to encourage the use of AI to fight COVID-19, the Allen Institute of AI published the [COVID-19 Open Research Dataset (CORD-19)](https://pages.semanticscholar.org/coronavirus-research), a free and open resource to promote global research collaboration. The dataset contains thousands of scholarly articles that can allow NLP inspired research to obtain insights that can help in the fight against [COVID-19](https://www.who.int/emergencies/diseases/novel-coronavirus-2019). -->
+
+<p><br />
+<strong><em>SECNLP: A survey of embeddings in clinical natural language processing</em></strong></p>
+
+<p><br />
+O <a href="https://www.sciencedirect.com/science/article/pii/S1532046419302436">SECNLP</a> é um trabalho que inclui uma revisão detalhada de uma ampla gama de técnicas de NLP aplicadas no contexto de saúde. O trabalho foca principalmente em métodos de <em>embedding</em>, problemas/desafios que essas representações buscam resolver, e uma discussão sobre possíveis direções de pesquisas.</p>
+
+<!-- [SECNLP](https://www.sciencedirect.com/science/article/pii/S1532046419302436) is a survey paper that includes a detailed overview of a wide variety of NLP methods and techniques applied in the clinical domain. The overview emphasizes mostly on embedding methods, problems/challenges addressed with embeddings, and discussion of future research directions. -->
+
+<p><br />
+<strong><em>AI for 3D Generative Design</em></strong></p>
+
+<p><br />
+Essa <a href="https://blog.insightdatascience.com/ai-for-3d-generative-design-17503d0b3943">postagem</a> apresenta uma abordagem utilizada para a geração de objetos 3D a partir de descrições em linguagem natural. A ideia é criar um solução que permita ao designer repetir o processo de criação de maneira mais ágil e explorar mais possibilidades. Após a criação de uma base de conhecimento do “espaço de design” composto de modelos 3D e descrições textuais, dois <em>autoencoders</em> (como exemplificado na Figura abaixo) são utilizados para codificar o conhecimento de maneira intuitiva. Com isso, o modelo é capaz de gerar um design 3D a partir de uma legenda, como você pode conferir nessa <a href="https://insight2020a.streamlit.io/starstorms9/shape/">demonstração</a>.</p>
+
+<!-- This [article](https://blog.insightdatascience.com/ai-for-3d-generative-design-17503d0b3943) covers an approach that was used to generate 3D objects from natural language descriptions. The idea is to create a solution that allows a designer to quickly reiterate in the design process and be able to explore more broadly the design space. After creating a knowledge base of the design space consisting of 3D models and text descriptions, two autoencoders (see figure below) were used to encode that knowledge in a way that can be interacted with intuitively. The model put together can then accept a text description and generate a 3D design, try it out in this [demo](https://insight2020a.streamlit.io/starstorms9/shape/). -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/0*pbBv2Wa5QX7lUufY.png" alt="" /></p>
+
+<p><a href="https://blog.insightdatascience.com/ai-for-3d-generative-design-17503d0b3943"><em>Fonte</em></a></p>
+
+<h1 id="ferramentas-e-bases-de-dados-️">Ferramentas e Bases de Dados ⚙️</h1>
+
+<p><strong><em>Stanza — A Python NLP Library for Many Human Languages</em></strong></p>
+
+<p><br />
+O grupo de NLP de Stanford disponibilizou a <a href="https://stanfordnlp.github.io/stanza/">Stanza</a> (denominada anteriormente como StanfordNLP), uma biblioteca em Python que oferece ferramentas de análise para mais de 70 idiomas. As funcionalidades incluem Tokenização, <em>Multi-Word Token Expansion</em>, Lematização, POS <em>tagging</em>, Reconhecimento de Entidades Nomeadas e muito mais. A biblioteca é baseada no PyTorch, com suporte a utilização em GPUs e modelos de redes neurais pré-treinadas. A <a href="https://github.com/explosion/spacy-stanza">Explosion</a> já criou um <em>wrapper</em> para a Stanza, possibilitando sua utilização como um componente do Pipeline do spaCy.</p>
+
+<!-- The Stanford NLP Group releases [Stanza](https://stanfordnlp.github.io/stanza/) (formerly StanfordNLP), a Python NLP library that provides out-of-the-box text analytic tools for more than 70 languages. Capabilities include tokenization, multi-word token expansion, lemmatization, POS, NER, and much more. The tool is built on top of the PyTorch library with support for using GPU and pretrained neural models. [Explosion](https://github.com/explosion/spacy-stanza) has also built a wrapper around Stanza that allows you to interact with Stanza models as a spaCy pipeline. -->
+
+<p><br />
+<strong><em>GridWorld Playground</em></strong></p>
+
+<p><br />
+Pablo Castro criou esse <a href="https://gridworld-playground.glitch.me/">site interessante</a> que implementa um <em>playground</em> para a criação de ambientes em grade, com o objetivo de observar e verificar como agentes de aprendizado por reforço tentam chegar ao objetivo, utilizando a técnica do <em>Q-Learning</em>. Dentre as funcionalidades, estão inclusas a habilidade de mudar os parâmetros do ambiente e de aprendizado em tempo real, mudar a posição dos agentes, e transferir <em>value functions</em> entre os dois.</p>
+
+<!-- Pablo Castro created an interesting [website](https://gridworld-playground.glitch.me/) that provides a playground for creating a Grid World environment to observe and test how a reinforcement learning agent tries to solve the Grid World. Some features include the ability to change the learning/environment parameters in real-time, change the position of the agent, and transfer values between two agents. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*D1e6ixTEONl21t0UNmcaog.png" alt="" /></p>
+
+<p><br />
+<strong><em>X-Stance: A Multilingual Multi-Target Dataset for Stance Detection</em></strong></p>
+
+<p><br />
+A tarefa de <a href="http://nlpprogress.com/english/stance_detection.html"><em>Stance detection</em></a> consiste na identificação do posicionamento de um sujeito frente a uma declaração de um ator, podendo ser utilizada na avaliação de notícias falsas. Jannis Vamvas e Rico Sennrich disponibilizaram recentemente uma <a href="https://arxiv.org/abs/2003.08385">base de dados de larga-escala</a> composta por textos escritos por candidatos das eleições na Suíça. Múltiplos idiomas estão disponíveis na base, o que possibilita a avaliação da tarefa de detecção de posicionamento em contextos multilíngues. Os autores também propuseram a utilização de um modelo BERT multilíngue, que apresentou um desempenho satisfatório nos cenários <em>zero-shot cross-lingual</em> and <em>cross-target transfer</em>.</p>
+
+<!-- [*Stance detection*](http://nlpprogress.com/english/stance_detection.html) is the extraction of a subject's reaction made to an actor’s claim which can be used for fake news assessment. Jannis Vamvas and Rico Sennrich recently published a [large-scale stance detection dataset](https://arxiv.org/abs/2003.08385) consisting of written text by electoral candidates in Switzerland. Multiple languages are available in the texts which could potentially lead to cross-lingual evaluations on the task of stance detection. The authors also propose the use of a multilingual BERT that achieves satisfactory performance on zero-shot cross-lingual and cross-target transfer. Learning across targets, in particular, is a challenging task so the authors used a simple technique involving standardized targets to train a single model on all the issues at once. -->
+
+<p><br />
+<strong><em>Create interactive textual heatmaps for Jupyter notebooks</em></strong></p>
+
+<p><br />
+Andreas Madsen criou uma biblioteca Python chamada <a href="https://github.com/AndreasMadsen/python-textualheatmap">TextualHeatMap</a>, que pode ser utilizada para gerar visualizações que auxiliam no entendimento de quais partes de uma frase estão sendo utilizadas pelo modelo na hora de predizer a próxima palavra, como ocorre em modelos de linguagem.</p>
+
+<!-- Andreas Madsen created a Python library called [TextualHeatMap](https://github.com/AndreasMadsen/python-textualheatmap) that can be used to render visualizations that help to understand what parts of a sentence the model is using to predict the next word such as in language models. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/0*IY3tKkznwarnRxdo.gif" alt="" /></p>
+
+<p><em>Fonte:</em> <a href="https://github.com/AndreasMadsen/python-textualheatmap"><em>textualheatmap</em></a></p>
+
+<h1 id="artigos-e-postagens-️">Artigos e Postagens ✍️</h1>
+
+<p><strong><em>How to generate text: using different decoding methods for language generation with Transformers</em></strong></p>
+
+<p><br />
+A Hugging Face publicou um <a href="https://huggingface.co/blog/how-to-generate">artigo</a> revisando diferentes técnicas utilizadas para a geração de texto, focando em abordagens baseadas no <em>Transformer</em>. São discutidos métodos como <em>beam search</em> e variações de processos de amostragem (“simples”, “Top-K” e “Top-p”). Já foram publicadas diversas outras postagens sobre esse mesmo assunto, porém nessa os autores dedicaram um bom tempo explicando os aspectos práticos das técnicas e como elas podem ser utilizadas na biblioteca <em>Transformers</em>.</p>
+
+<!-- HuggingFace published an [article](https://huggingface.co/blog/how-to-generate) explaining the different methods used for language generation in particular for Transformer based approaches. Among those techniques discussed are greedy search, beam search, sampling, top-k sampling, and top-p (nucleus) sampling. There are many articles like this out there but the authors spent more time explaining the practical side of these methods and how they can be applied via code snippets. -->
+
+<p><br />
+<strong><em>Training RoBERTa from Scratch — The Missing Guide</em></strong></p>
+
+<p><br />
+Motivado pela falta de um guia acessível para o treinamento do zero (<em>from scratch</em>) de modelos de linguagem baseados no BERT utilizando a biblioteca <em>Transformers</em> da Hugging Face, Marcin Zablocki disponibilizou esse <a href="https://zablo.net/blog/post/training-roberta-from-scratch-the-missing-guide-polish-language-model/">tutorial detalhado</a>. O guia mostra como treinar um modelo de linguagem para o Polonês e traz várias dicas sobre como evitar erros comuns, preparação dos dados, configurações de pré-processamento, tokenização, treinamento, monitoramento do processo de treino e compartilhamento do modelo.</p>
+
+<!-- Motivated by the lack of a comprehensive guide for training a BERT-like language model from scratch using the Transformer’s library, Marcin Zablocki shares this detailed [tutorial](https://zablo.net/blog/post/training-roberta-from-scratch-the-missing-guide-polish-language-model/). The guide shows how to train a transformer language model for the Polish language with tips on what common mistakes to avoid, data preparation, pretraining configuration, tokenization, training, monitoring training process, and sharing the model. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/0*PFPgjeUmzvazglqg.png" alt="" /></p>
+
+<h1 id="educação-">Educação 🎓</h1>
+
+<p><strong><em>Getting started with JAX (MLPs, CNNs &amp; RNNs)</em></strong></p>
+
+<p><br />
+Robert Lange publicou recentemente um <a href="https://roberttlange.github.io/posts/2020/03/blog-post-10/">tutorial</a> ilustrando como treinar uma <em>Gated Recurrent Unit (GRU)</em> com a nova biblioteca da Google, a JAX. Na <a href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/16/NLP_Newsletter-PT-BR-_NLP_7.html">edição passada da <em>Newsletter</em></a>, nós abordamos alguns tópicos relacionados à biblioteca.</p>
+
+<!-- Robert Lange recently published a comprehensive [tutorial](https://roberttlange.github.io/posts/2020/03/blog-post-10/) on how to train a GRU-RNN with JAX. In our [previous newsletter](https://medium.com/dair-ai/nlp-newsletter-nlp-paper-summaries-learning-to-simulate-transformers-notebooks-med7-measuring-de61fadd9db0), we also shared a couple of resources related to JAX. -->
+
+<p><br />
+<strong><em>NLP for Developers: Word Embeddings</em></strong></p>
+
+<p><br />
+Rachael Tatman publicou o primeiro episódio da sua nova série, a <em>NLP for Developers</em>, que cobrirá as melhores práticas relacionadas à aplicação de diversos métodos de NLP. O <a href="http://youtube.com/watch?v=oUpuABKoElw&amp;feature=emb_logo">primeiro vídeo</a> apresenta uma introdução à <em>word embeddings</em> e como são utilizados, além de dicas para evitar erros comuns quando trabalhamos com esse tipo de representação.</p>
+
+<!-- Rachael Tatman published the first episode of a new series called NLP for Developers that will cover best practices on how to apply a wide range of NLP methods. The [first episode](http://youtube.com/watch?v=oUpuABKoElw&feature=emb_logo) includes an introduction to word embedding and how they are used and other common issues to avoid when applying them. -->
+
+<p><br />
+<strong><em>Thomas Wolf: An Introduction to Transfer Learning and HuggingFace</em></strong></p>
+
+<p><br />
+Thomas Wolf apresentou essa <a href="https://www.youtube.com/watch?v=rEGB7-FlPRs&amp;feature=youtu.be">palestra</a> sobre <em>Transfer Learning</em> no <em>meetup</em> NLP Zurich, fornecendo uma excelente introdução ao assunto para o contexto de NLP. A palestra apresenta uma visão geral dos momentos mais importantes para a área, além de uma introdução às bibliotecas <em>Transformers</em> e <em>Tokenizers</em>, dois dos módulos mais populares da Hugging Face.</p>
+
+<!-- Thomas Wolf presented his [talk](https://www.youtube.com/watch?v=rEGB7-FlPRs&feature=youtu.be) on Transfer Learning for the NLP Zurich meetup providing a great introduction to transfer learning in NLP. The talk includes an overview of recent NLP breakthroughs and an introduction to Transformers and Tokenizers, two of the most popular libraries released by the HuggingFace team and contributors. -->
+
+<p><br />
+<img src="https://cdn-images-1.medium.com/max/800/1*PMZ8ptBWo4wZ432kr-FXqA.png" alt="" /></p>
+
+<h1 id="menções-honrosas-️">Menções Honrosas ⭐️</h1>
+
+<p><br />
+Você sabia que o Google Sheets fornece uma ferramenta de tradução gratuita? Amit Chaudhary compartilhou uma <a href="https://amitness.com/2020/02/back-translation-in-google-sheets/">postagem</a> que mostra como utilizar essa funcionalidade para “tradução reversa”, fornecendo uma maneira de aumentar a sua base de dados em tarefas de NLP.</p>
+
+<!-- Did you know that Google Sheets provides a free translation feature? Amit Chaudhary shares an [article](https://amitness.com/2020/02/back-translation-in-google-sheets/) that shows how to leverage the feature for back translation which is useful for augmenting your limited text corpus for NLP. -->
+
+<p><br />
+A New York NLP estará organizando um <a href="https://www.meetup.com/NY-NLP/events/269502774/"><em>meetup</em> online</a> para uma palestra intitulada <em>“Using Wikipedia and Wikidata for NLP”</em> onde será discutido como se beneficiar dos dados dessas plataformas para diferentes projetos e casos de uso de NLP.</p>
+
+<!-- New York NLP will be hosting an [online meetup](https://www.meetup.com/NY-NLP/events/269502774/) for a talk titled “Using Wikipedia and Wikidata for NLP” where the presenter will talk about how to leverage Wikipedia for different NLP projects and use cases. -->
+
+<p><br />
+Lavanya Shukla escreveu esse <a href="https://app.wandb.ai/cayush/pytorchlightning/reports/Use-Pytorch-Lightning-with-Weights-%26-Biases--Vmlldzo2NjQ1Mw">tutorial</a> sobre como utilizar a <em>PyTorch Lightning</em> para otimizar hiper-parâmetros de uma rede neural enquanto utilizamos funcionalidades de estrutura e estilo de código fornecidas pela biblioteca. O modelo resultante e seu desempenho utilizando diferentes combinações de hiper-parâmetros podem ser visualizados utilizando o <em>logger</em> WandB, que pode ser passado como parâmetro para o objeto responsável pelo treinamento do modelo.</p>
+
+<!-- Lavanya Shukla wrote this nice [tutorial](https://app.wandb.ai/cayush/pytorchlightning/reports/Use-Pytorch-Lightning-with-Weights-%26-Biases--Vmlldzo2NjQ1Mw) on how to use PyTorch Lightning to optimize hyperparameters of a neural network while at the same time taking advantage of the simple code structures/styles provided in PyTorch Lightning. The resulting model and its performance using different hyper-parameters are visualized using the results produced by the WandB logger which can be provided as a logger parameter to a trainer object. -->
+
+<p><br />
+Um grupo de pesquisadores publicou um <a href="https://arxiv.org/abs/2003.07845">estudo</a> investigando de maneira mais aprofundada porquê a técnica de <em>batch normalization (BN)</em> tende a prejudicar a performance de modelos baseados no <em>Transformer</em> para diferentes tarefas de NLP. Com base nos comportamentos observados, os autores propuseram uma nova abordagem denominada <em>power normalization</em>. A técnica proposta apresenta um desempenho superior tanto ao <em>BN</em> quanto ao <em>layer normalization</em>, outra técnica amplamente utilizada atualmente.</p>
+
+<!-- A group of researchers published a [study](https://arxiv.org/abs/2003.07845) investigating more in detail why batch normalization (BN) tends to degrade performance in Transformer based methods applied to different NLP tasks. Based on those findings, the authors propose a new approach called power normalization to deal with issues found in BN. The method outperforms both BN and layer normalization (commonly used these days) on a variety of NLP tasks. -->
+
+<p><br />
+Esse <a href="https://www.datasciencecentral.com/profiles/blogs/10-timeless-reference-books"><em>blog post</em></a> apresenta uma extensa lista de livros para ajudar você a iniciar seus estudos e experiências com Aprendizado de Máquina.</p>
+
+<!-- This [blog post](https://www.datasciencecentral.com/profiles/blogs/10-timeless-reference-books) contains a long list of books to get you started with ML. -->
+
+<hr />
+
+<p>Se você conhece bases de dados, projetos, postagens, tutoriais ou artigos que gostaria de ver na próxima edição da <em>Newsletter</em>, sinta-se a vontade para nos contactar através do e-mail ellfae@gmail.com ou de uma <a href="https://twitter.com/omarsar0">mensagem direta no twitter</a>.</p>
+
+<p><br />
+<a href="https://dair.ai/newsletter/"><em>Inscreva-se</em></a> <em>🔖 para receber as próximas edições na sua caixa de entrada!</em></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="VictorGarritano/personal_blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/personal_blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/personal_blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/personal_blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/VictorGarritano" title="VictorGarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/victor-garritano" title="victor-garritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/vic_garritano" title="vic_garritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li><li><a rel="me" href="https://t.me/victorgarritano" title="victorgarritano"><svg class="svg-icon grey"><use xlink:href="/personal_blog/assets/minima-social-icons.svg#telegram"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

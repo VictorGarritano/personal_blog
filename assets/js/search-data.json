@@ -61,7 +61,7 @@
 
   
       ,"page2": {
-          "title": "CV",
+          "title": "",
           "content": "&lt;!DOCTYPE html&gt; . My CV . &lt;embed src=&quot;resources/githubflow-online.pdf&quot; type=&quot;application/pdf&quot;, width=&quot;100%&quot;, height=&quot;600px&quot; /&gt; .",
           "url": "https://victorgarritano.github.io/personal_blog/cv/",
           "relUrl": "/cv/",

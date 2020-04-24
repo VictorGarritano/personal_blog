@@ -1,4 +1,360 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://victorgarritano.github.io/personal_blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://victorgarritano.github.io/personal_blog/" rel="alternate" type="text/html" /><updated>2020-04-07T10:15:59-05:00</updated><id>https://victorgarritano.github.io/personal_blog/feed.xml</id><title type="html">Garritano’s Blog</title><entry><title type="html">NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…</title><link href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" rel="alternate" type="text/html" title="NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…" /><published>2020-03-22T00:00:00-05:00</published><updated>2020-03-22T00:00:00-05:00</updated><id>https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter%5BPT-BR%5D_8</id><content type="html" xml:base="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html">&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*SptuncVzQw49OZFlDVaQdw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://victorgarritano.github.io/personal_blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://victorgarritano.github.io/personal_blog/" rel="alternate" type="text/html" /><updated>2020-04-24T13:37:49-05:00</updated><id>https://victorgarritano.github.io/personal_blog/feed.xml</id><title type="html">Garritano’s Blog</title><entry><title type="html">NLP Newsletter [PT-BR] #10: Aprimorando a reprodutibilidade em ML, Privacidade e Segurança em NLP, XTREME, Longformer, VilBERT, exBERT,…</title><link href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/04/19/NLP_Newsletter-PT-BR-_10.html" rel="alternate" type="text/html" title="NLP Newsletter [PT-BR] #10: Aprimorando a reprodutibilidade em ML, Privacidade e Segurança em NLP, XTREME, Longformer, VilBERT, exBERT,…" /><published>2020-04-19T00:00:00-05:00</published><updated>2020-04-19T00:00:00-05:00</updated><id>https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/04/19/NLP_Newsletter%5BPT-BR%5D_10</id><content type="html" xml:base="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/04/19/NLP_Newsletter-PT-BR-_10.html">&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*WxbP3uKvd2GB6B-NaxtiIw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Seja muito bem-vindo à 10ª edição da NLP Newsletter. Nós esperamos que todos estejam bem e se mantendo seguros. Essa edição cobre tópicos como melhores práticas envolvendo Modelos de Linguagem, reprodutibilidade em ML e privacidade e segurança em NLP.
+&lt;!-- Welcome to the 10th issue of the NLP Newsletter. We hope you are well and staying safe. In this issue, we cover topics that range from best practices regarding language models to reproducibility in machine learning to privacy and security in natural language processing (NLP). --&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;atualizações-da-darai-️&quot;&gt;Atualizações da dar.ai 🔬🎓⚙️&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Com o intuito de ajudar na análise exploratória do &lt;a href=&quot;https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge&quot;&gt;&lt;em&gt;COVID-19 Open Research Dataset&lt;/em&gt;&lt;/a&gt; e na obtenção de &lt;em&gt;insights&lt;/em&gt; a partir dessa literatura, nós publicamos um &lt;a href=&quot;https://github.com/dair-ai/covid_19_search_application&quot;&gt;&lt;em&gt;notebook&lt;/em&gt;&lt;/a&gt; com os passos para a implementação de uma aplicação simples de busca por similaridade textual utilizando ferramentas de código-aberto e modelos de linguagem pré-treinados publicamente disponíveis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - In order to help in the exploration of the [COVID-19 Open Research Dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge) and obtain insights from scientific literature, we published a [notebook](https://github.com/dair-ai/covid_19_search_application) that walks through the steps of building a simple text similarity search application using open source tools and publicly available pretrained language models. --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nós realizamos um treinamento virtual na &lt;a href=&quot;https://odsc.com/boston/&quot;&gt;&lt;em&gt;Open Data Science Conference&lt;/em&gt;&lt;/a&gt; na semana passada, com o tema &lt;em&gt;Deep Learning for Modern NLP&lt;/em&gt;. Você pode acessar os materiais &lt;a href=&quot;https://github.com/dair-ai/odsc_2020_nlp&quot;&gt;aqui&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - We delivered a virtual training at the [Open Data Science Conference](https://odsc.com/boston/) this past week on [&quot;Deep Learning for Modern NLP&quot;](https://github.com/dair-ai/odsc_2020_nlp). Find materials here. --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Também na semana passada, nós publicamos dois artigos bem interessantes, numa colaboração com membros da nossa comunidade. Um dos trabalhos aborda &lt;a href=&quot;https://medium.com/dair-ai/unsupervised-progressive-learning-upl-a-new-problem-for-ai-9a1c68c70a28&quot;&gt;&lt;em&gt;unsupervised progressive learning&lt;/em&gt;&lt;/a&gt;, um problema que envolve um agente que analisa uma sequência de vetores de dados não anotados (fluxo de dados) e aprende representações a partir da mesma. O segundo &lt;a href=&quot;https://medium.com/dair-ai/structural-scaffolds-for-citation-intent-classification-in-scientific-publications-e5acd2f0ebf9&quot;&gt;trabalho&lt;/a&gt; resume uma abordagem para &lt;em&gt;Citation Intent Classification&lt;/em&gt; (que consiste em identificar porquê um autor citou outro trabalho) utilizando o modelo ELMo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - This past week we published two articles together with members of our community. One is about [unsupervised progressive learning](https://medium.com/dair-ai/unsupervised-progressive-learning-upl-a-new-problem-for-ai-9a1c68c70a28) which is a problem that involves an agent that analyzes a sequence of unlabelled data vectors (data stream) and learns representations from these. The second [article](https://medium.com/dair-ai/structural-scaffolds-for-citation-intent-classification-in-scientific-publications-e5acd2f0ebf9) summarizes an approach for citation intent classification using ELMo. --&gt;
+
+&lt;!-- - We recently published a [notebook](https://colab.research.google.com/drive/1nwCE6b9PXIKhv2hvbqf1oZKIGkXMTi1X) that helps to provide ideas on how to fine-tune pretrained language models for the task of emotion classification. --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nós publicamos recentemente um &lt;a href=&quot;https://colab.research.google.com/drive/1nwCE6b9PXIKhv2hvbqf1oZKIGkXMTi1X&quot;&gt;&lt;em&gt;notebook&lt;/em&gt;&lt;/a&gt; que fornece ideias para o ajuste fino de modelos de linguagem pré-treinados para a tarefa de classificação de emoções.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pesquisas-e-publicações-&quot;&gt;Pesquisas e Publicações 📙&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+No início dessa semana, pesquisadores da Google AI e da DeepMind publicaram um interessante &lt;em&gt;benchmark&lt;/em&gt; multi-tarefa denominado &lt;a href=&quot;https://arxiv.org/abs/2003.11080&quot;&gt;XTREME&lt;/a&gt;, que busca encorajar a avaliação das capacidades de generalização em diferentes idiomas de modelos de linguagem que aprendem representações multilíngues. O &lt;em&gt;benchmark&lt;/em&gt; conta com 40 idiomas e 9 tarefas, que requerem entendimento sobre diferentes níveis de significado, tanto do ponto de vista sintático quanto semântico. O trabalho fornece bases para comparações utilizando modelos estado-da-arte para representações multilíngues, como o mBERT, XML e o MMTE.&lt;/p&gt;
+
+&lt;!-- Earlier this week, researchers at Google AI and DeepMind published an interesting multi-task benchmark called [XTREME](https://arxiv.org/abs/2003.11080) that aims to encourage evaluation of the cross-lingual generalization capabilities of language models that learn multilingual representations. The benchmark tests on 40 languages and 9 different tasks that collectively require reasoning about different levels of meaning either syntactically or semantically. The paper also provides baseline results using state-of-the-art models for multilingual representation such as mBERT, XLM, and MMTE. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/0*kk7J1fCht_VZR_su.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fonte:&lt;/em&gt; &lt;a href=&quot;https://ai.googleblog.com/2020/04/xtreme-massively-multilingual-multi.html&quot;&gt;&lt;em&gt;Google AI Blog&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Evaluating Machines by their Real-World Language Use&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Foi demonstrado que modelos de linguagem apresentam um desempenho relativamente bom em diversas tarefas, como &lt;em&gt;question answering&lt;/em&gt; e &lt;em&gt;sequence labeling&lt;/em&gt;. Entretanto, um novo &lt;a href=&quot;https://arxiv.org/abs/2004.03607&quot;&gt;artigo&lt;/a&gt; propõe um &lt;em&gt;framework&lt;/em&gt; e &lt;em&gt;benchmark&lt;/em&gt; para melhor avaliar se modelos de linguagem (LMs) conseguem desempenhar bem seu papel com o uso de linguagem do mundo real em situações mais complexas (por exemplo, gerar conselhos proveitosos para o cenário atual do mundo). Resultados empíricos mostraram que modelos do estado-da-arte atual, como o T5, geram conselhos úteis como os escritos por humanos em apenas 9% dos casos. Essas observações apontam as deficiências dos LMs no que diz respeito a entender e modelar conhecimentos de mundo e do senso comum.&lt;/p&gt;
+
+&lt;!-- It has been shown that language models perform relatively well on a variety of tasks such as question answering and sequence labeling. However, a new [paper](https://arxiv.org/abs/2004.03607) proposes a framework and benchmark to better evaluate whether language models can perform at real-world language use with more complex settings (e.g., generating helpful advice for current situations). Empirical results demonstrate that current state-of-the-art models such as T5 generate advice that is as helpful as human-written advice in only 9% of the cases. These results point out the shortcomings of LMs in the ability to understand and model world knowledge and common-sense reasoning. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Give your Text Representation Models some Love: the Case for Basque&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+É possível que modelos monolíngues (como os &lt;em&gt;word embeddings&lt;/em&gt; do FastText e o BERT) treinados em grandes bases de dados de idiomas específicos produzam melhores resultados que alternativas multilíngues? Num &lt;a href=&quot;https://arxiv.org/abs/2004.00033&quot;&gt;artigo recente&lt;/a&gt;, pesquisadores estudaram o desempenho de diversos modelos desse tipo utilizando uma grande base de dados para a língua basca. Os resultados indicaram que modelos monolíngues podem de fato produzir melhores resultados em tarefas como classificação de tópicos, de sentimentos e &lt;em&gt;PoS tagging&lt;/em&gt; para esse idioma. Seria muito interessante verificar se o comportamento se repete para outros idiomas e quais resultados interessantes e novos desafio podem surgir.&lt;/p&gt;
+
+&lt;!-- Can training monolingual models (FastText word embeddings and BERT) on large language-specific datasets produce better results than pretrained multilingual versions? In a recent [paper](https://arxiv.org/abs/2004.00033), researchers study the effect and performance of pertaining models using larger Basque corpora. Results indicate that indeed the model does produce better results on downstream tasks such as topic classification, sentiment classification, and PoS tagging for Basque. It could be interesting to test if this holds for other languages and whether there could some interesting results or new challenges that arise. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*rN7mNPz0os7kd8rBboliIg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figura extraída de&lt;/em&gt; &lt;a href=&quot;https://arxiv.org/abs/2004.00033&quot;&gt;&lt;em&gt;Agerri et al. (2020)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Advancing Self-Supervised and Semi-Supervised Learning with SimCLR&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Numa &lt;a href=&quot;https://dair.ai/NLP_Newsletter-PT-BR-_The_Annotated_GPT-2,_Understanding/&quot;&gt;edição anterior&lt;/a&gt; da Newsletter, nós apresentamos o SimCLR, método desenvolvido pela Google AI que propõe um &lt;em&gt;framework&lt;/em&gt; para &lt;em&gt;contrastive self-supervised learning&lt;/em&gt; de representações visuais, com o objetivo de melhorar os resultados da tarefa de classificação de imagens em diferentes cenários, como &lt;em&gt;transfer-learning&lt;/em&gt; ou aprendizado semi-supervisionado, utilizando bases não-anotadas. Os &lt;a href=&quot;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html&quot;&gt;resultados&lt;/a&gt; obtidos demonstraram que a abordagem alcança resultados estado-da-arte no ImageNet utilizando apenas 1% de dados anotados, o que também é um indicativo das possíveis vantagens do método em cenários com escassez de dados.&lt;/p&gt;
+
+&lt;!-- In a previous [issue](https://medium.com/dair-ai/nlp-newsletter-the-annotated-gpt-2-understanding-self-distillation-haiku-ganilla-sparkwiki-b0f47f595c82) of the newsletter, we featured SimCLR, a method by Google AI that proposes a framework for *contrastive self-supervised learning* of visual representations for improving image classification results in different settings such as transfer learning and semi-supervised learning. It is a new approach to self-and semi-supervised learning to learn visual representations from unlabeled data. [Results](https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html) demonstrate that it achieves state-of-the-art results on ImageNet while only relying on 1% labeled data which indicates that the method could also be beneficial in low-resourced settings. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*kGiv7LFJW1g_R6m2XblSSA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fonte:&lt;/em&gt; &lt;a href=&quot;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html&quot;&gt;&lt;em&gt;Google AI Blog&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Vale mencionar que o aprendizado auto-supervisionado (&lt;em&gt;self-supervised learning&lt;/em&gt;) é um dos tópicos mais quentes na área atualmente. Se você tem interesse em saber mais, confira:&lt;/p&gt;
+
+&lt;!-- It is worth mentioning that self-supervised learning is one of the hot topics in the field. If you are interested to know more you can check out the following: --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2020/04/08/technology/ai-computers-learning-supervised-unsupervised.html&quot;&gt;Computers Already Learn From Us. But Can They Teach Themselves?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amitness.com/2020/02/illustrated-self-supervised-learning/&quot;&gt;The Illustrated Self-Supervised Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/2020/01/13/self_supervised/&quot;&gt;Self-supervised learning and computer vision&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Byte Pair Encoding is Suboptimal for Language Model Pretraining&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Kaj Bostrom e Greg Durrett publicaram um &lt;a href=&quot;https://arxiv.org/pdf/2004.03720.pdf&quot;&gt;trabalho&lt;/a&gt; onde foi investigado se o &lt;em&gt;Byte Pair Encoding (BPE)&lt;/em&gt;, um algoritmo para tokenização habitualmente utilizado, é a estratégia ótima para o treinamento de modelos de linguagem. Os autores propuseram uma avaliação direta do impacto da tokenização no desempenho desses modelos, o que, segundo eles, é raramente examinado, como observado na literatura. Para verificar isso, LMs foram treinados do zero em experimentos controlados, empregando diferentes técnicas de tokenização, a saber, &lt;em&gt;Unigram&lt;/em&gt; e &lt;em&gt;BPE&lt;/em&gt;. Após isso, os modelos pré-treinados foram testados em diversas tarefas. Os resultados mostraram que o desempenho utilizando a estratégia &lt;em&gt;Unigram&lt;/em&gt; se equiparou e até mesmo foi superior ao BPE.&lt;/p&gt;
+
+&lt;!-- Kaj Bostrom and Greg Durrett published a [paper](https://arxiv.org/pdf/2004.03720.pdf) where they aimed to investigate whether the commonly used tokenization algorithm called Byte Pair Encoding (BPE) is the most optimal for pretraining language models (LMs). In other words, they proposed a direct evaluation of the tokenization impact on the performance of LMs. According to the authors, this is rarely ever examined as observed in the literature. To achieve this, they pretrain LMs from scratch using controlled experiments and apply different tokenization, namely unigram and BPE. Thereafter they would test the resulting pretrained LMs on several downstream tasks. Results demonstrate that the unigram tokenization matches or outperforms the more common BPE. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Longformer: The Long-Document Transformer&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Pesquisadores do Allen AI publicaram um novo modelo baseado no Transformer, denominado &lt;a href=&quot;https://arxiv.org/abs/2004.05150&quot;&gt;Longformer&lt;/a&gt;, desenvolvido visando um desempenho mais eficiente em textos longos. Como já é conhecido, uma das limitações de modelos baseados no Transformer é que eles são computacionalmente custosos, devido à maneira como a operação de &lt;em&gt;self-attention&lt;/em&gt; escala (quadraticamente com o tamanho da sequência), limitando assim a utilização de contextos mais longos. Recentemente, várias alternativas como o &lt;a href=&quot;https://arxiv.org/abs/2001.04451&quot;&gt;Reformer&lt;/a&gt; e o &lt;a href=&quot;https://arxiv.org/abs/1904.10509&quot;&gt;Sparse Transformers&lt;/a&gt; foram propostas, visando possibilitar a aplicação dessa classe de modelos para documentos maiores. O Longformer combina modelagem a nível de caractere e &lt;em&gt;self-attention&lt;/em&gt; (uma mistura do mecanismo de atenção local e global) para requerer menos memória e demonstra sua eficiência na modelagens de textos longos. Os autores também mostraram que o seu modelo pré-treinado supera outros métodos quando aplicados à tarefas a nível de documento, como &lt;em&gt;question answering&lt;/em&gt; e classificação de texto.&lt;/p&gt;
+
+&lt;!-- Researchers at Allen AI published a new Transformer-based model called [Longformer](https://arxiv.org/abs/2004.05150) that is targeted at performing more efficiently with longer text. It is well known that one of the limitations of Transformer-based models is that they are computationally expensive due to how the self-attention operation scales (quadratically with sequence length) thus limiting the ability to process longer sequences. Recently, there have been many efforts such as the [Reformer](https://arxiv.org/abs/2001.04451) and [Sparse Transformers](https://arxiv.org/abs/1904.10509) to enable the applicability of Transformers for long documents. The Longformer combines character-level modeling and self-attention (mix of local and global attention) to consume less memory and demonstrate effectiveness in long document modeling. Authors also show that their pretrained model outperforms other methods when applied to document-level downstream tasks including QA and text classification. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*uTxVqLtO_nQaDw4OedUUtQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figura extraída de&lt;/em&gt; &lt;a href=&quot;https://arxiv.org/abs/2004.05150&quot;&gt;&lt;em&gt;Beltagy et al. (2020)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;criatividade-ética-e-sociedade-&quot;&gt;Criatividade, Ética e Sociedade 🌎&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Reprodutibilidade em ML&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;\&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A questão da reprodutibilidade vem sendo discutida ativamente pelas comunidades de Aprendizado de Máquina. Com o intuito de encorajar uma ciência mais aberta, transparente e acessível, diversos esforços vêm sendo realizados a favor dela. Se você quiser entender como está essa questão no campo de ML, confira essa &lt;a href=&quot;https://arxiv.org/abs/2003.12206&quot;&gt;publicação&lt;/a&gt; feita por Joelle Pineau, dentre outros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - Reproducibility has been an ongoing topic of discussion amongst the machine learning communities. In order to encourage more open, transparent and accessible science, there have been many efforts around reproducibility. If you want to understand where the field of machine learning stands in terms of reproducibility, check out this [publication](https://arxiv.org/abs/2003.12206) by Joelle Pineau and others. --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Recentemente, e inspirado por esses esforços, o time do Papers With Code (que agora fazem parte do grupo de IA do Facebook) realizaram uma &lt;a href=&quot;https://medium.com/paperswithcode/ml-code-completeness-checklist-e9127b168501&quot;&gt;postagem&lt;/a&gt; explicando uma &lt;a href=&quot;https://github.com/paperswithcode/releasing-research-code&quot;&gt;&lt;em&gt;checklist&lt;/em&gt; de reprodutibilidade&lt;/a&gt; bem útil, com o objetivo de &lt;em&gt;“facilitar pesquisas reprodutíveis apresentadas nas principais conferências de ML”&lt;/em&gt; (em tradução livre). A &lt;em&gt;checklist&lt;/em&gt; avalia os códigos disponibilizados nos seguintes aspectos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - More recently, and inspired by these efforts, the Papers With Code team (now part of Facebook AI) published a [blog post](https://medium.com/paperswithcode/ml-code-completeness-checklist-e9127b168501) explaining a useful [reproducibility checklist](https://github.com/paperswithcode/releasing-research-code) to “*facilitate reproducible research presented at major ML conferences*”. The checklist assesses code submission on the following: --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Dependências&lt;/strong&gt;: O repositório apresenta informações sobre as dependências ou instruções sobre como preparar o ambiente de desenvolvimento?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Códigos de treinamento&lt;/strong&gt;: O repositório fornece uma maneira de treinar o(s) modelo(s) descritos no artigo?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Códigos de Avaliação&lt;/strong&gt;: O repositório fornece um código para calcular o desempenho do(s) modelo(s) treinado(s) ou rodar os experimentos neles?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Modelos pré-treinados&lt;/strong&gt;: O repositório fornece acesso gratuito aos parâmetros do modelo pré-treinado?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Resultados&lt;/strong&gt;: O repositório fornece uma tabela/gráfico com os principais resultados e o código para reproduzir esses resultados?&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*BQH6F1J3TE1T_GREv5xSew.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fonte:&lt;/em&gt; &lt;a href=&quot;https://medium.com/paperswithcode/ml-code-completeness-checklist-e9127b168501&quot;&gt;&lt;em&gt;Papers with Code&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ainda nessa questão de ciência aberta e reprodutibilidade, aqui está uma postagem interessante, feita por um pesquisador de NLP, &lt;a href=&quot;https://twitter.com/srush_nlp/status/1245825437240102913?s=20&quot;&gt;oferecendo uma recompensa&lt;/a&gt; pela reprodução de resultados de um artigo que outro pesquisador não conseguiu reproduzir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- - On the topic of open science and reproducibility, here is an interesting post by an NLP researcher [offering](https://twitter.com/srush_nlp/status/1245825437240102913?s=20) a bounty for replicating results from a paper that another researcher couldn’t replicate. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Privacidade e Segurança em NLP&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Será que um modelo de linguagem pré-treinado pode ser roubado, ou sua exposição para uso via &lt;em&gt;API&lt;/em&gt; pode trazer implicações de segurança? Em um novo artigo, pesquisadores testaram &lt;em&gt;APIs&lt;/em&gt; de modelos baseados no BERT para implicações de segurança, no que diz respeito à utilização de consultas para roubo do modelo. Resumidamente, eles observaram que um adversário pode roubar um modelo refinado apenas utilizando sequências de palavras sem sentido e refinando o seu próprio modelo com as predições do modelo-alvo. Leia mais sobre ataques de extração de modelos &lt;a href=&quot;http://www.cleverhans.io/2020/04/06/stealing-bert.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- Can a pretrained language model be stolen or does it impose any security implications when exposed for usage via APIs? In a new paper, researchers aim to test BERT-based APIs for security implications particularly regarding the use of queries to steal the model. In summary, they did found that an adversary can steal a fine-tuned model by just feeding gibberish sequences and fine-tuning their own model on the predicted labels of the victim model. Read more about model extraction attacks [here](http://www.cleverhans.io/2020/04/06/stealing-bert.html). --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*K9ZD4USdovdyHXomB7csfA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sistema de extração de modelos aplicado a um modelo-alvo treinado no SQuAD (&lt;a href=&quot;http://www.cleverhans.io/2020/04/06/stealing-bert.html&quot;&gt;Fonte&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Outro &lt;a href=&quot;https://arxiv.org/abs/2004.06660&quot;&gt;artigo interessante&lt;/a&gt;, aceito na ACL 2020, investigou se modelos de linguagem pré-treinados são suscetíveis a ataques. Os autores desenvolveram um método de “envenenamento” que é capaz de injetar vulnerabilidades nos parâmetros pré-treinados, tornando os modelos vulneráveis à ameaças. Devido a essas vulnerabilidades, é possível mostrar que esses modelos expõem &lt;em&gt;backdoors&lt;/em&gt; que podem ser aproveitadas por invasores com o intuito de manipular as predições do modelo, simplesmente injetando qualquer palavra-chave arbitrária. Para testar esse comportamento, modelos pré-treinados foram utilizados em tarefas que envolviam bases de dados “corrompidas” com palavras-chave específicas, feitas para forçar o modelos a classificar exemplos de maneira incorreta.&lt;/p&gt;
+
+&lt;!-- Another interesting [paper](https://arxiv.org/abs/2004.06660), accepted at ACL 2020, investigates whether pretrained language models are susceptible to attacks. The authors develop a *poisoning* method that is able to inject vulnerabilities into pretrained weights rendering these pretrained models vulnerable to serious threats. Due to this vulnerability, it is possible to show that these models expose backdoors that can be leveraged by an attacker to manipulate the model’s predictions by simply injecting any arbitrary keyword. To test this, pretrained models were used to perform downstream tasks that involved datasets injected with specific keywords meant to force the model to misclassify instances. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*s4QscGOeDiN6tHOfM99pww.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figura extraída de&lt;/em&gt; &lt;a href=&quot;https://arxiv.org/abs/2004.06660&quot;&gt;&lt;em&gt;Kurita et al. (2020)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Uma série de pesquisas e aplicações baseadas em IA para COVID-19&lt;/em&gt;&lt;/strong&gt;
+&lt;!-- ***A COVID-19 series of AI-based applications and research*** --&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A COVID-19 provou-se um dos maiores desafios dos tempos modernos. Pesquisadores de todas as partes do mundo tentam encontrar maneiras de contribuir e ajudar a entender a doença, fornecendo desde ferramentas de busca até bases de dados. Sebastian Ruder publicou uma &lt;a href=&quot;http://newsletter.ruder.io/issues/covid-19-edition-236509&quot;&gt;edição dedicada&lt;/a&gt; da sua &lt;em&gt;Newsletter&lt;/em&gt; destacando alguns projetos interessantes que pesquisadores de IA vêm desenvolvendo.
+&lt;!-- - COVID-19 has proven one of the biggest challenges in modern times. Researchers from all over the world are trying to find ways to contribute and help in understanding COVID-19, from search engines to data set releases. Sebastian Ruder recently published a dedicated [issue](http://newsletter.ruder.io/issues/covid-19-edition-236509) of his newsletter highlighting a few interesting projects that AI researchers have been work on. --&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ainda nesse assunto, pesquisadores do Allen AI irão discutir a agora popular base de dados &lt;em&gt;COVID-19 Open Research Dataset (CORD-19)&lt;/em&gt; num &lt;a href=&quot;https://www.meetup.com/NY-NLP/events/269849442&quot;&gt;&lt;em&gt;meetup&lt;/em&gt; virtual&lt;/a&gt; que acontecerá no final desse mês (27/04/2020).
+&lt;!-- - On the topic of COVID-19, researchers at Allen AI will discuss the now popular COVID-19 Open Research Dataset (CORD-19) in a [virtual meetup](https://www.meetup.com/NY-NLP/events/269849442) happening towards the end of this month. --&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A CORD-19 vem sendo utilizada por muitos pesquisadores para a construção de aplicações impulsionadas por NLP, como ferramentas de busca. Confira esse &lt;a href=&quot;https://openreview.net/forum?id=PlUA_mgGaPq&quot;&gt;artigo recente&lt;/a&gt; para um exemplo de implementação dessas ferramentas que auxiliam pesquisadores a obter &lt;em&gt;insights&lt;/em&gt; rápidos relacionados à CORD-19 a partir de resultados reportados em artigos de especialistas. De acordo com os autores, tais ferramentas ajudam em tomadas de decisão baseadas em evidências.
+&lt;!-- - The CORD-19 dataset is being used by many researchers to build NLP-powered applications such as search engines. Take a look at this recent [paper](https://openreview.net/forum?id=PlUA_mgGaPq) for an example of a search engine implementation that can help researchers obtain quick insights related to CORD-19 from results reported in scholarly articles. Such tools can help inform evidence-based decision making according to the authors. --&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ArCOV-19 é uma base de dados de &lt;em&gt;tweets&lt;/em&gt; em árabe sobre COVID-19, que cobre um período de 27 de janeiro até 31 de março de 2020 (e a coleta continua!). É a primeira base dados publicamente disponível do Twitter Árabe cobrindo a pandemia do COVID-19, onde estão inclusos cerca de 748K &lt;em&gt;tweets&lt;/em&gt; populares (de acordo com o critério de busca do próprio Twitter) junto com as redes de propagação do sub-conjunto mais popular de postagens. As redes incluem tanto &lt;em&gt;retweets&lt;/em&gt; quando &lt;em&gt;threads&lt;/em&gt; de respostas.  &lt;a href=&quot;https://gitlab.com/bigirqu/ArCOV-19&quot;&gt;ArCOV-19&lt;/a&gt; é projetado para permitir a pesquisa em diversas áreas, como NLP, Ciência de Dados, Computadores e Sociedade, entre outras.
+&lt;!-- - ArCOV-19 is an Arabic COVID-19 Twitter dataset that covers the period from the 27th of January till the 31st of March 2020 (and still ongoing). It is the first publicly-available Arabic Twitter dataset covering the COVID-19 pandemic that includes around 748k popular tweets (according to Twitter search criterion) alongside the propagation networks of the most-popular subset of them. The propagation networks include both retweets and conversational threads (i.e., threads of replies). [ArCOV-19](https://gitlab.com/bigirqu/ArCOV-19) is designed to enable research under several domains including natural language processing, data science, and social computing, among others. --&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;ferramentas-e-bases-de-dados-️&quot;&gt;Ferramentas e Bases de Dados ⚙️&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Machine Learning in Python: Main Developments and Technology Trends in Data Science, Machine Learning, and Artificial Intelligence&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Mesmo não sendo uma ferramenta ou base de dados por si só, esse excelente &lt;a href=&quot;https://www.mdpi.com/2078-2489/11/4/193&quot;&gt;artigo&lt;/a&gt;, com autoria de Sebastian Raschka, Joshua Patterson, e Corey Nolet, fornece uma visão geral compreensiva de alguns dos principais desenvolvimentos em termos de tendências tecnológicas em ML, com foco na linguagem de programação Python.&lt;/p&gt;
+
+&lt;!-- Not a tool or dataset per se, but this excellent [paper](https://www.mdpi.com/2078-2489/11/4/193) by Sebastian Raschka, Joshua Patterson, and Corey Nolet provides a comprehensive overview of some of the main developments in terms of technology trends in machine learning, particularly focused on the Python programming language. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*OUpM4KS2uvT7zWlMYqy8RQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figura extraída de&lt;/em&gt; &lt;a href=&quot;https://www.mdpi.com/2078-2489/11/4/193&quot;&gt;&lt;em&gt;Raschka et al. (2020)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Interpretabilidade e Explicabilidade em ML&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+A Hugging Face disponibilizou uma ferramenta de visualização denominada exBERT, que nos permite visualizar as representações aprendidas por modelos de linguagem como o BERT e RoBERTa. Essa funcionalidade foi integrada à &lt;a href=&quot;https://huggingface.co/models?filter=exbert&quot;&gt;página de modelos&lt;/a&gt;, com o objetivo de prover um melhor entendimento sobre como os modelos de linguagem estão aprendendo, assim como quais propriedades são potencialmente codificadas por eles nessas representações.&lt;/p&gt;
+
+&lt;!-- HuggingFace released a visualization tool called exBERT that allows you to visualize learned representations from language models such as BERT and RoBERTa. This feature was integrated into their [model pages](https://huggingface.co/models?filter=exbert) and aims at better understanding how language models are learning and what properties they are potentially encoding in these learned representations. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+A OpenAI disponibilizou recentemente uma aplicação web chamada &lt;a href=&quot;https://microscope.openai.com/models&quot;&gt;Microscope&lt;/a&gt; que contém uma coleção de visualizações obtidas de camadas e neurônios de diversos modelos de visão computacional que são comumente estudados no contexto de interpretabilidade. O objetivo principal é facilitar a análise e compartilhamento de &lt;em&gt;insights&lt;/em&gt; interessantes, obtidos a partir das características aprendidas pelas redes neurais, assim como viabilizar um melhor entendimento dos mesmos.&lt;/p&gt;
+
+&lt;!-- OpenAI recently released a web application called [Microscope](https://microscope.openai.com/models) that contains a collection of visualizations obtained from significant layers and neurons of various vision models that are often studied in the context of interpretability. The main objective is to allow ease of analysis and sharing of interesting insights that emerge from these features learned in the neural networks so as to better understand them. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*4VdcqSSyzWDMvVDPEuKzIQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;CloudCV: ViLBERT Multi-Task Demo&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+No edição anterior da &lt;a href=&quot;https://dair.ai/NLP_Research_Highlights_-_Issue_-1/&quot;&gt;NLP Research Highlights&lt;/a&gt;, nós apresentamos o ViLBERT multi-tarefa, que é um método para o aprimoramento de &lt;em&gt;vision-and-language models&lt;/em&gt; que pode ser utilizado em recuperação de imagens baseada em descrições e &lt;em&gt;visual question answering (VQA)&lt;/em&gt;. Agora, os autores disponibilizaram uma &lt;a href=&quot;https://vilbert.cloudcv.org/&quot;&gt;aplicação web&lt;/a&gt; para teste dos modelos em 8 tarefas diferentes de linguagem e visão computacional, como VQA e &lt;em&gt;pointing question answering&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- In the previous [NLP Research Highlights](https://dair.ai/NLP_Research_Highlights_-_Issue_-1/), we featured multitask ViLBERT which is a method for improving vision-and-language models that can be used for caption-based image retrieval and visual question answering (VQA). The authors now provide a [web application](https://vilbert.cloudcv.org/) to test the models on eight different vision and language tasks such as VQA and pointing question answering. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;A Twitter Dataset of 150+ million tweets related to COVID-19 for open research&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Devido à relevância da pandemia global de COVID-19, pesquisadores estão liberando uma &lt;a href=&quot;https://zenodo.org/record/3738018&quot;&gt;base de dados&lt;/a&gt; com &lt;em&gt;tweets&lt;/em&gt; relacionados a doença. Desde a primeira versão disponibilizada, dados adicionais de novos colaborados foram adicionados, permitindo o crescimento da base até seu volume atual. A aquisição dedicada de dados começou em 11 de março, com mais de 4 milhões de &lt;em&gt;tweets&lt;/em&gt; por dia.&lt;/p&gt;
+
+&lt;!-- Due to the relevance of the COVID-19 global pandemic, researchers are releasing a [dataset](https://zenodo.org/record/3738018) of tweets acquired from Twitter related to COVID-19 chatter. Since the first release, additional data from new collaborators has been added, allowing this resource to grow to its current size. Dedicated data gathering started from March 11th yielding over 4 million tweets a day. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;A tiny autograd engine&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Andrej Karpathy disponibilizou recentemente uma biblioteca conhecida como &lt;a href=&quot;https://github.com/karpathy/micrograd&quot;&gt;micrograd&lt;/a&gt;, que permite a construção e treinamento de redes neurais utilizando uma interface simples e intuitiva. Na verdade, ele escreveu a biblioteca completa com aproximadamente 150 linhas de código, o que, segundo ele, é a mais compacta ferramenta de diferenciação automática que existe. Idealmente, bibliotecas como essa podem ser utilizadas para fins educacionais.&lt;/p&gt;
+
+&lt;!-- Andrej Karpathy recently released a library called [micrograd](https://github.com/karpathy/micrograd) which provides the ability to build and train a neural network using a simple and intuitive interface. In fact, he wrote the whole library in roughly 150 lines of code which he claims is the tiniest autograd engine there is. Ideally, such types of libraries can be used for educational purposes. --&gt;
+
+&lt;h1 id=&quot;artigos-e-postagens-️&quot;&gt;Artigos e Postagens ✍️&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;The Transformer Family and Recent Developments&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Numa nova e oportuna postagem, Lilian Weng resumiu alguns dos recentes avanços no modelo Transformer. O &lt;a href=&quot;https://lilianweng.github.io/lil-log/2020/04/07/the-transformer-family.html&quot;&gt;artigo&lt;/a&gt; utiliza uma notação amigável, apresenta uma revisão da literatura bem como as últimas melhorias propostas, como atenção com contextos mais longos (Transformer XL) e redução nos requisitos computacionais e de memória.&lt;/p&gt;
+
+&lt;!-- In a new and timely blog post, Lilian Weng summarizes some of the recent developments of the Transformer model. The [article](https://lilianweng.github.io/lil-log/2020/04/07/the-transformer-family.html) provides nice notation, historical review, and the latest improvements such as longer attention span (Transformer XL), reduced computation and memory consumption. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*i-4V-EIirg2cvGMVLd8BWA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+A compressão de modelos é uma importante área de pesquisa em NLP, devido à natureza e ao tamanho de modelos de linguagem pré-treinados. Idealmente, conforme os modelos produzem novos resultados estado-da-arte para as mais diferentes tarefas de NLP, torna-se importante reduzir seus requisitos computacionais, tornando sua utilização viável em produção. Madison May publicou recentemente outro excelente &lt;a href=&quot;https://www.pragmatic.ml/a-survey-of-methods-for-model-compression-in-nlp/&quot;&gt;artigo&lt;/a&gt; trazendo um visão geral de alguns métodos utilizados para compressão de modelos para NLP. Alguns dos tópicos principais incluem poda, otimização dos grafos de computação, destilação de conhecimento, substituição progressiva de módulos, entre outros.&lt;/p&gt;
+
+&lt;!-- Model compression is an important area of research in NLP due to the nature and large size of pretrained language models. Ideally, as these models continue to produce state-of-the-art results across a wide variety of NLP tasks it becomes important to reduce their computational needs so as to make them feasible in production. Madison May recently published another excellent [article](https://www.pragmatic.ml/a-survey-of-methods-for-model-compression-in-nlp/) summarizing a few methods used for model compression, particularly in NLP. Some of the main topics include pruning, graph optimizations, knowledge distillation, progressive module replacement, among others. --&gt;
+
+&lt;h1 id=&quot;educação-&quot;&gt;Educação 🎓&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Guest Lecture on Language Models by Alec Radford&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Se você tem interesse em conhecer os aspectos teóricos dos métodos utilizados para o aprendizado de modelos de linguagem como o CBOW, Word2Vec, ELMo, GPT, BERT, ELECTRA, T5 e GPT, então você deveria conferir essa excelente &lt;a href=&quot;https://www.youtube.com/watch?v=BnpB3GrpsfM&quot;&gt;aula&lt;/a&gt; do Alec Radford (pesquisador na OpenAI). Ela faz parte de um &lt;a href=&quot;https://sites.google.com/view/berkeley-cs294-158-sp20/home&quot;&gt;curso em andamento&lt;/a&gt;, lecionado pelo Pieter Abbeel, sobre técnicas de aprendizado não-supervisionado com redes neurais profundas.&lt;/p&gt;
+
+&lt;!-- If you are curious to know the theoretical aspect of methods used for learning language models such as CBOW, Word2Vec, ELMo, GPT, BERT, ELECTRA, T5, and GPT, then you might be interested in this great [guest lecture](https://www.youtube.com/watch?v=BnpB3GrpsfM) by Alec Radford (researcher at OpenAI). This was delivered as part of the ongoing [course](https://sites.google.com/view/berkeley-cs294-158-sp20/home) taught by Pieter Abbeel on deep unsupervised learning techniques. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*GUxoCXqhozkp_aaRxpT3Sg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Python Numpy Tutorial (with Jupyter and Colab)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+O popular curso online de Stanford, &lt;em&gt;Convolutional Neural Network for Visual Recognition&lt;/em&gt;, agora inclui um &lt;em&gt;link&lt;/em&gt; para um &lt;em&gt;notebook&lt;/em&gt; do Colab com o seu &lt;a href=&quot;https://cs231n.github.io/python-numpy-tutorial/&quot;&gt;guia introdutório&lt;/a&gt; ao NumPy, que apresenta um passo a passo extenso mas muito interessante para iniciantes.&lt;/p&gt;
+
+&lt;!-- Stanford’s popular online course on Convolutional Neural Network for Visual Recognition now includes a link to a Google Colab notebook for its [introductory guide](https://cs231n.github.io/python-numpy-tutorial/) to Numpy. It’s a very extensive walkthrough but it’s very nice for beginners. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;New mobile neural network architectures&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Interessado em construir modelos de redes neurais para dispositivos móveis ou de borda? Então essa &lt;a href=&quot;https://machinethink.net/blog/mobile-architectures/&quot;&gt;postagem&lt;/a&gt; bem acessível pode te ajudar! O artigo cobre diversas configurações de redes e inclui testes de velocidade.&lt;/p&gt;
+
+&lt;!-- Interested in building neural network architectures for mobile and edge devices, then this comprehensive [blog post](https://machinethink.net/blog/mobile-architectures/) may be for you. The article covers a range of neural network designs and includes speed performance tests. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Data-Driven Sentence Simplification: Survey and Benchmark&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+A tarefa de &lt;em&gt;Sentence simplification&lt;/em&gt; (simplificação de frases, numa tradução livre), possui a finalidade de modificar uma frase de modo a torná-la mais fácil de ler e entender. Essa &lt;a href=&quot;https://www.mitpressjournals.org/doi/full/10.1162/coli_a_00370&quot;&gt;coletânea&lt;/a&gt; foca em abordagens que tentam aprender a simplificar utilizando uma base de pares de sentenças em inglês, contendo as versões originais e simplificadas, que é um paradigma dominante nos dias atuais. Também está incluso um &lt;em&gt;benchmark&lt;/em&gt; dos diferentes métodos em diversas bases de dados, que os compara e destaca os pontos fortes e fracos de cada um deles.&lt;/p&gt;
+
+&lt;!-- Sentence simplification aims to modify a sentence in order to make it easier to read and understand. This [survey paper](https://www.mitpressjournals.org/doi/full/10.1162/coli_a_00370) focuses on approaches that attempt to learn how to simplify using corpora of aligned original-simplified sentence pairs in English, which is the dominant paradigm nowadays. It also includes a benchmark of different approaches on common data sets so as to compare them and highlight their strengths and limitations. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Tópicos Avançados em Aprendizado de Máquina&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Yisong Yue publicou todas as vídeo-aulas do curso &lt;a href=&quot;https://sites.google.com/view/cs-159-spring-2020/lectures?authuser=0&quot;&gt;Data-Driven Algorithm Design&lt;/a&gt;. São cobertos tópicos de ML como otimização Bayesiana, computação diferenciável e &lt;em&gt;imitation learning&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- Yisong Yue published all lecture videos for the [Data-Driven Algorithm Design](https://sites.google.com/view/cs-159-spring-2020/lectures?authuser=0) course. It contains advanced topics in machine learning that range from Bayesian optimization to differentiable computation to imitation learning. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*8YFTbEPUw3Bqio70xP0WXQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;menções-honrosas-️&quot;&gt;Menções Honrosas ⭐️&lt;/h1&gt;
+
+&lt;p&gt;Acesse as edições anteriores da NLP Newsletter &lt;a href=&quot;https://github.com/dair-ai/nlp_newsletter&quot;&gt;aqui&lt;/a&gt; (&lt;a href=&quot;(https://github.com/dair-ai/nlp_newsletter)&quot;&gt;última edição em PT-BR&lt;/a&gt;).&lt;/p&gt;
+
+&lt;!-- Get access to the previous issues of the NLP Newsletter [here](https://github.com/dair-ai/nlp_newsletter). --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Harvard está &lt;a href=&quot;https://online-learning.harvard.edu/catalog?keywords=&amp;amp;paid%5B1%5D=1&amp;amp;max_price=&amp;amp;start_date_range%5Bmin%5D%5Bdate%5D=&amp;amp;start_date_range%5Bmax%5D%5Bdate%5D=&quot;&gt;oferecendo&lt;/a&gt; uma ótima seleção de cursos &lt;em&gt;self-paced&lt;/em&gt; de maneira gratuita!
+&lt;!-- Harvard is currently [offering](https://online-learning.harvard.edu/catalog?keywords=&amp;paid%5B1%5D=1&amp;max_price=&amp;start_date_range%5Bmin%5D%5Bdate%5D=&amp;start_date_range%5Bmax%5D%5Bdate%5D=) a great selection of self-paced courses for free. --&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/zaidalyafeai/ARBML&quot;&gt;ARBML&lt;/a&gt; fornece implementações de diversos projetos de NLP e ML para a língua árabe, incluindo experiências em tempo real utilizando diversas interfaces, como a &lt;em&gt;web&lt;/em&gt;, linha de comando e &lt;em&gt;notebooks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!-- [ARBML](https://github.com/zaidalyafeai/ARBML) provides implementations of many Arabic NLP and ML projects providing real-time experience using many interfaces like web, command line and notebooks. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;https://nlpdashboard.com&quot;&gt;NLP Dashboard&lt;/a&gt; é uma aplicação &lt;em&gt;web&lt;/em&gt; de NLP interessante, que oferece Reconhecimento de Entidades Nomeadas e análises estatísticas de textos e notícias. Construída utilizando spaCy, Flask e Python.&lt;/p&gt;
+
+&lt;!-- [NLP Dashboard](https://nlpdashboard.com) is a fun NLP web app to perform named entity recognition and statistical analysis of text and news stories. Built using spaCy, Flask, and Python. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Caso você ainda não conheça, Connor Shorten mantém um &lt;a href=&quot;https://www.youtube.com/channel/UCHB9VepY6kYvZjj0Bgxnpbw?sub_confirmation=1&quot;&gt;canal no YouTube&lt;/a&gt; bastante informativo, onde ele resume artigos de ML bem recentes e interessantes. São apresentados os detalhes importantes de cada trabalho através de um excelente e conciso resumo. Connor também começou um &lt;a href=&quot;https://www.youtube.com/channel/UCMLtBahI5DMrt0NPvDSoIRQ&quot;&gt;&lt;em&gt;podcast&lt;/em&gt;&lt;/a&gt; com outros grandes pesquisadores e educadores da área.&lt;/p&gt;
+
+&lt;!-- If you haven’t checked it out, Connor Shorten maintains this really informative [YouTube channel](https://www.youtube.com/channel/UCHB9VepY6kYvZjj0Bgxnpbw?sub_confirmation=1) where he summarizes interesting and recent ML papers. He covers the important details of each work while providing excellent short and concise summaries. He also started a [podcast](https://www.youtube.com/channel/UCMLtBahI5DMrt0NPvDSoIRQ) with other great researchers and explainers in the field. --&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/microsoft/nlp-recipes&quot;&gt;Aqui&lt;/a&gt; está um repositório impressionante e bem completo que apresenta as melhoras práticas e recomendações (via &lt;em&gt;notebooks&lt;/em&gt; e explicações) para diversos cenários de NLP, como classificação de texto, &lt;em&gt;entailment&lt;/em&gt; (estabelecer relações lógicas, como implicação e contradição, entre textos), sumarização de texto, &lt;em&gt;question answering&lt;/em&gt;, etc.&lt;/p&gt;
+
+&lt;!-- [Here](https://github.com/microsoft/nlp-recipes) is a rich and impressive repository that provides best practices and recommendations (via notebooks and explanations) for many NLP scenarios such as text classification, entailment, text summarization, question answering, etc. --&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Se você conhece bases de dados, projetos, postagens, tutoriais ou artigos que gostaria de ver na próxima edição da &lt;em&gt;Newsletter&lt;/em&gt;, por favor nos envie utilizando esse &lt;a href=&quot;https://forms.gle/3b7Q2w2bzsXE6uYo9&quot;&gt;formulário&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;https://dair.ai/newsletter/&quot;&gt;&lt;em&gt;Inscreva-se&lt;/em&gt;&lt;/a&gt; &lt;em&gt;🔖 para receber as próximas edições na sua caixa de entrada!&lt;/em&gt;&lt;/p&gt;</content><author><name>VictorGarritano</name></author><summary type="html">Nessa edição, são cobertos tópicos como melhores práticas envolvendo modelos de linguagem, reprodutibilidade em ML e privacidade e segurança no Processamento de Linguagem Natural (NLP)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://victorgarritano.github.io/personal_blog/%7B%22thumb%22=%3E%22nlp_newsletter_10.png%22%7D" /><media:content medium="image" url="https://victorgarritano.github.io/personal_blog/%7B%22thumb%22=%3E%22nlp_newsletter_10.png%22%7D" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…</title><link href="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html" rel="alternate" type="text/html" title="NLP Newsletter [PT-BR] #8: NeRF, CORD-19, Stanza, Text Generation 101, Notebooks, SECNLP, Dreamer,…" /><published>2020-03-22T00:00:00-05:00</published><updated>2020-03-22T00:00:00-05:00</updated><id>https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter%5BPT-BR%5D_8</id><content type="html" xml:base="https://victorgarritano.github.io/personal_blog/nlp_newsletter/2020/03/22/NLP_Newsletter-PT-BR-_8.html">&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*SptuncVzQw49OZFlDVaQdw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;atualizações-da-dairai&quot;&gt;Atualizações da dair.ai&lt;/h1&gt;
 
